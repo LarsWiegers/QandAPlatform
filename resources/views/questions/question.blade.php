@@ -24,8 +24,17 @@
                 @endforeach
             @for ($i = 0; $i < count($answers); $i++)
                         <div class="panel panel-default">
-                            <div class="panel-heading">
-                                {{$users[$i][0]->name}}
+                            <div class="panel-heading question">
+                                <div class="question__title">
+                                    {{$users[$i][0]->name}}
+                                </div>
+                                <div class="question__created_date">
+                                    Created on : {{$answers[$i]->created_at}}
+                                </div>
+                                <div class="question__updated_date">
+                                    last updated on : {{$answers[$i]->updated_at}}
+                                </div>
+
                             </div>
 
                             <div class="panel-body">
