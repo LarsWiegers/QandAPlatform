@@ -37,6 +37,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         &nbsp;<li><a href="/questions/">Questions</a></li>
+                        &nbsp;<li><a href="/add-a-question/">Add a question</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

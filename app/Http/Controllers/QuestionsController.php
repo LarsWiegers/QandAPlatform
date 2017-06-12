@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Question;
 use App\Answer;
 use App\User;
-
+use Illuminate\Support\Facades\Input;
 class QuestionsController extends Controller
 {
     /**
@@ -53,5 +53,26 @@ class QuestionsController extends Controller
             "users" => $users
             ]
         );
+    }
+    /**
+     * Show the specific question.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function add_a_question()
+    {
+        return view('questions.add-a-question');
+    }
+    /**
+     * Show the specific question.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function add(Request $request)
+    {
+        $question = new Question();
+        $question->fill( $request->all() );
+        $question->save();
+        return view("home");
     }
 }

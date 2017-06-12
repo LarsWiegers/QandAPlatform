@@ -21,3 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/questions', 'QuestionsController@index')->name("questions_home");
 Route::get('/question/{id}/{title}', 'QuestionsController@specific')->name("question_specific");
 Route::get('/question/{id}', 'QuestionsController@specific')->name("question_specific");
+
+Route::get('/add-a-question', 'QuestionsController@add_a_question')->name("add-a-question");
+Route::post('/add-a-question', 'QuestionsController@Add')->name("add-a-question");
