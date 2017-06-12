@@ -24,3 +24,4 @@ Route::get('/question/{id}', 'QuestionsController@specific')->name("question_spe
 
 Route::get('/add-a-question', 'QuestionsController@add_a_question')->name("add-a-question");
 Route::post('/add-a-question', 'QuestionsController@Add')->name("add-a-question");
+Route::post('/add-a-answer', 'QuestionsController@AddAnswer')->name("add-a-answer");

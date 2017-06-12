@@ -75,4 +75,16 @@ class QuestionsController extends Controller
         $question->save();
         return view("home");
     }
+    /**
+     * Show the specific question.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function AddAnswer(Request $request)
+    {
+        $answer = new Answer();
+        $answer->fill( $request->all() );
+        $answer->save();
+        return view("home");
+    }
 }

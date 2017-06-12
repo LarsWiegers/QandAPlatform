@@ -42,6 +42,40 @@
                             </div>
                         </div>
                 @endfor
+            <div class="panel panel-default">
+                <div class="panel-heading">Add your Answer</div>
+
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('add-a-answer') }}">
+                        {{ csrf_field() }}
+
+                        <div class="form-group{{ $errors->has('question') ? ' has-error' : '' }}">
+                            <label for="password" class="col-md-4 control-label">Answer</label>
+
+                            <div class="col-md-6">
+                                <textarea id="question" class="form-control" name="answer" required></textarea>
+
+                                @if ($errors->has('question'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('answer') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        @foreach($question as $item)
+                            <input type="hidden" value="{{$item->id}}" name="question_id">
+                        @endforeach
+                        <input type="hidden" value="{{Auth::user()->id}}" name="user_id">
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
             </div>
         </div>
     </div>

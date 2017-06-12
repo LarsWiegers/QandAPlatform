@@ -12,4 +12,6 @@ class Answer extends Model
      * @var string
      */
     protected $table = 'answers';
+
+    protected $fillable = ['question_id', 'user_id', 'answer', 'created_at', 'updated_at'];
 }
