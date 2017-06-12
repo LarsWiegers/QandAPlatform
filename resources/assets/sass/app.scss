@@ -1,0 +1,48 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.questions{
+    display:flex;
+    &__id {
+      flex:0 1 50px;
+    }
+    &__title {
+      flex: 1 0 auto;
+      a {
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+    }
+    &__created_date{
+      flex: 0 0 150px;
+    }
+    &__updated_date{
+      flex: 0 0 150px;
+    }
+}
+.question{
+  display:flex;
+  &__title{
+    flex: 1 0 50%;
+  }
+  &__created_date{
+    flex: 0 0 25%;
+  }
+  &__updated_date{
+    flex: 0 0 25%;
+  }
+}
+.panel-body {
+  word-break: break-all;
+}
