@@ -5835,4 +5835,11 @@ button.close {
 .panel-body {
   word-break: break-all; }
 
+.order-by {
+  position: fixed;
+  right: 15px;
+  top: 55px; }
+  .order-by .control-label {
+    text-align: left; }
+
 /*# sourceMappingURL=app.css.map */

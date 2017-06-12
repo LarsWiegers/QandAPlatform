@@ -46,3 +46,11 @@
 .panel-body {
   word-break: break-all;
 }
+.order-by {
+  position: fixed;
+  right:15px;
+  top:55px;
+  .control-label {
+    text-align:left;
+  }
+}
